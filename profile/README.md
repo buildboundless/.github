@@ -2,4 +2,4 @@
 
 App developers for startups and entrepreneurs.
 
-Learn more at [buildboundless.com](buildboundless.com)
+Learn more at [buildboundless.com](https://buildboundless.com)
