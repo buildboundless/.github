@@ -1,0 +1,30 @@
+name: "Remix test"
+
+on:
+  workflow_call:
+    secrets: inherit
+
+jobs:
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Cancel previous runs
+        uses: styfle/cancel-workflow-action@0.9.1
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+
+      - name: Install dependencies
+        uses: bahmutov/npm-install@v1
+
+      - name: Arc hydrate
+        run: ./node_modules/.bin/arc hydrate
+
+      - name: Run tests
+        run: npm test
