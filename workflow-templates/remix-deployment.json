@@ -1,0 +1,14 @@
+{
+    "name": "Remix deployment",
+    "description": "Standard deployment for Remix apps.",
+    "iconName": "example-icon",
+    "categories": [
+        "JavaScript",
+        "TypeScript"
+    ],
+    "filePatterns": [
+        "package.json$",
+        "^Dockerfile",
+        ".*\\.md$"
+    ]
+}
